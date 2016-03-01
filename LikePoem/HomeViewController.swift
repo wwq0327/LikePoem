@@ -11,7 +11,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class HomeViewController: UICollectionViewController {
-    let poems = ["元日\n爆竹声中一岁除，\n春风送暖入屠苏。\n千门万户曈曈日，\n总把新桃换旧符。", "天净沙·秋思\n枯藤老树昏鸦，\n小桥流水人家，\n古道西风瘦马。\n夕阳西下，\n断肠人在天涯。", "虞美人·春花秋月何时了\n春花秋月何时了？\n往事知多少。\n小楼昨夜又东风，\n故国不堪回首月明中。\n\n雕栏玉砌应犹在，\n只是朱颜改。\n问君能有几多愁？\n恰似一江春水向东流。"]
+    let poems = ["元日\n爆竹声中一岁除，\n春风送暖入屠苏。\n千门万户曈曈日，\n总把新桃换旧符。", "天净沙·秋思\n枯藤老树昏鸦，\n小桥流水人家，\n古道西风瘦马。\n夕阳西下，\n断肠人在天涯。", "虞美人·春花秋月何时了\n春花秋月何时了？\n往事知多少。\n小楼昨夜又东风，\n故国不堪回首月明中。\n\n雕栏玉砌应犹在，\n只是朱颜改。\n问君能有几多愁？\n恰似一江春水向东流。\n春花秋月何时了？\n往事知多少。\n小楼昨夜又东风，\n故国不堪回首月明中。\n\n雕栏玉砌应犹在，\n只是朱颜改。\n问君能有几多愁？\n恰似一江春水向东流。"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +46,11 @@ class HomeViewController: UICollectionViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
        
         if segue.identifier == "show Detail" {
-            if let vc = segue.destinationViewController as? PoemViewController {
-                if let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell) {
-                    vc.poemText = poems[indexPath.row]
+            if let navvc = segue.destinationViewController as? UINavigationController {
+                if let vc = navvc.topViewController as? PoemViewController {
+                    if let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell) {
+                        vc.poemText = poems[indexPath.row]
+                    }
                 }
             }
         }
@@ -73,7 +75,7 @@ class HomeViewController: UICollectionViewController {
     
         // Configure the cell
         
-        cell.poemTextLabel.text = poems[indexPath.row]
+        cell.poemTextLabel.text = "\n\(poems[indexPath.row])"
         cell.poemTextLabel.font = UIFont(name: "FZSKBXKJW--GB1-0", size: 18)
         cell.poemTextLabel.setLineHeight(1.6)
         cell.poemTextLabel.textAlignment = .Center

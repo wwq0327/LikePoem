@@ -34,3 +34,27 @@ extension UILabel {
         self.attributedText = attrString
     }
 }
+
+class PoeLabel: myUILabel {
+    var textAttributes: [String: AnyObject]!
+    
+    convenience init(fontname: String, labelText: String, fontSize: CGFloat, lineHeight: CGFloat) {
+        self.init(frame: CGRectZero)
+        
+        let font = UIFont(name: fontname, size: fontSize) as UIFont!
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = lineHeight
+        
+        textAttributes = [NSFontAttributeName: font, NSParagraphStyleAttributeName: paragraphStyle]
+        let labelSize = (labelText as NSString).boundingRectWithSize(CGSizeZero, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: textAttributes, context: nil)
+        // 设定label的大小
+        let _x = (UIScreen.mainScreen().bounds.width - labelSize.width) / 2
+        self.frame = CGRectMake(_x, -60 , labelSize.width, labelSize.height)
+        self.attributedText = NSAttributedString(string: labelText, attributes: textAttributes)
+        self.lineBreakMode = NSLineBreakMode.ByCharWrapping
+        self.numberOfLines = 0
+        self.verticalAlignment = VerticalAlignmentTop
+        self.textAlignment = .Center
+    }
+}

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -20,7 +19,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AtX-Yo-oxF">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="AtX-Yo-oxF">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -29,7 +28,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="MvQ-0e-To8" kind="show" identifier="show Detail" id="D3D-Ea-cP1"/>
+                                    <segue destination="Fi5-f8-qp8" kind="show" identifier="show Detail" id="D3D-Ea-cP1"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -55,40 +54,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mi-pa-lUC" customClass="myUILabel">
-                                <rect key="frame" x="20" y="40" width="560" height="540"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">虞美人·春花秋月何时了
-五代 李煜
-
-春花秋月何时了？
-往事知多少。
-小楼昨夜又东风，
-故国不堪回首月明中。
-
-雕栏玉砌应犹在，
-只是朱颜改。
-问君能有几多愁？
-恰似一江春水向东流。</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Id-sb-TqQ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="5Mi-pa-lUC" secondAttribute="trailing" id="FlY-c1-MX6"/>
-                            <constraint firstItem="Cok-P0-aij" firstAttribute="top" secondItem="5Mi-pa-lUC" secondAttribute="bottom" constant="20" id="bwx-Ok-tef"/>
-                            <constraint firstItem="5Mi-pa-lUC" firstAttribute="leading" secondItem="Lgc-AN-qA4" secondAttribute="leadingMargin" id="fuA-km-ztU"/>
-                            <constraint firstItem="5Mi-pa-lUC" firstAttribute="top" secondItem="hUm-Gs-wIe" secondAttribute="bottom" constant="20" id="n8O-X4-YnF"/>
+                            <constraint firstItem="0Id-sb-TqQ" firstAttribute="leading" secondItem="Lgc-AN-qA4" secondAttribute="leading" id="gqO-EM-pQR"/>
+                            <constraint firstItem="Cok-P0-aij" firstAttribute="top" secondItem="0Id-sb-TqQ" secondAttribute="bottom" id="jrQ-1L-dCc"/>
+                            <constraint firstItem="0Id-sb-TqQ" firstAttribute="top" secondItem="hUm-Gs-wIe" secondAttribute="bottom" id="x5a-l8-Iwu"/>
+                            <constraint firstAttribute="trailing" secondItem="0Id-sb-TqQ" secondAttribute="trailing" id="xs1-YF-1Ow"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wBj-8O-atv"/>
+                    <navigationItem key="navigationItem" id="wBj-8O-atv">
+                        <barButtonItem key="leftBarButtonItem" title="关闭" id="PAd-Jl-0ch">
+                            <connections>
+                                <action selector="backClicked:" destination="MvQ-0e-To8" id="jz1-ph-FsJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="sML-st-js1">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="poemTextLabel" destination="5Mi-pa-lUC" id="hql-pS-WW8"/>
+                        <outlet property="scrollView" destination="0Id-sb-TqQ" id="960-S0-W1W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tux-Ux-qWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2002" y="580"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Ut-mA-kKk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="Fi5-f8-qp8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oly-CG-nPC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MvQ-0e-To8" kind="relationship" relationship="rootViewController" id="a57-O0-ILT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbK-8U-djJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="580"/>
         </scene>

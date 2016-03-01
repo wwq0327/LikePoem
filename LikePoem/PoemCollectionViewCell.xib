@@ -9,13 +9,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="poemCell" id="gTV-IL-0wX" customClass="PoemCollectionViewCell" customModule="LikePoem" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="283" height="371"/>
+            <rect key="frame" x="0.0" y="0.0" width="283" height="420"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="283" height="371"/>
+                <rect key="frame" x="0.0" y="0.0" width="283" height="420"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-i3-12N" customClass="myUILabel">
-                        <rect key="frame" x="8" y="28" width="267" height="315"/>
+                        <rect key="frame" x="8" y="28" width="267" height="364"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <string key="text">虞美人·春花秋月何时了
 五代 李煜
@@ -42,11 +42,11 @@
                 <constraint firstAttribute="bottomMargin" secondItem="9DB-i3-12N" secondAttribute="bottom" constant="20" id="orA-qj-epD"/>
                 <constraint firstAttribute="trailingMargin" secondItem="9DB-i3-12N" secondAttribute="trailing" id="rrP-qq-XRT"/>
             </constraints>
-            <size key="customSize" width="283" height="371"/>
+            <size key="customSize" width="283" height="420"/>
             <connections>
                 <outlet property="poemTextLabel" destination="9DB-i3-12N" id="CNn-DL-ei0"/>
             </connections>
-            <point key="canvasLocation" x="729.5" y="394.5"/>
+            <point key="canvasLocation" x="729.5" y="370"/>
         </collectionViewCell>
     </objects>
 </document>

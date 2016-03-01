@@ -19,6 +19,7 @@
 		AD1C057F1C85A3C00037922E /* 方正宋刻本秀楷简体.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AD1C057E1C85A3C00037922E /* 方正宋刻本秀楷简体.TTF */; };
 		AD1C05811C85A8380037922E /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05801C85A8380037922E /* FontStyle.swift */; };
 		AD1C05851C85AAA30037922E /* myUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05841C85AAA30037922E /* myUILabel.m */; };
+		AD1C05AA1C85D4930037922E /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		AD1C05821C85AAA20037922E /* LikePoem-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LikePoem-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD1C05831C85AAA30037922E /* myUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myUILabel.h; sourceTree = "<group>"; };
 		AD1C05841C85AAA30037922E /* myUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myUILabel.m; sourceTree = "<group>"; };
+		AD1C05A81C85D4930037922E /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 		AD1C05601C8598D60037922E /* LikePoem */ = {
 			isa = PBXGroup;
 			children = (
+				AD1C05A81C85D4930037922E /* UINavigationBar+Awesome.h */,
+				AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */,
 				AD1C05831C85AAA30037922E /* myUILabel.h */,
 				AD1C05841C85AAA30037922E /* myUILabel.m */,
 				AD1C057D1C85A3940037922E /* Fonts */,
@@ -173,6 +178,7 @@
 				AD1C05741C8599540037922E /* CustomLayout.swift in Sources */,
 				AD1C057C1C859E650037922E /* PoemViewController.swift in Sources */,
 				AD1C05811C85A8380037922E /* FontStyle.swift in Sources */,
+				AD1C05AA1C85D4930037922E /* UINavigationBar+Awesome.m in Sources */,
 				AD1C05851C85AAA30037922E /* myUILabel.m in Sources */,
 				AD1C05621C8598D60037922E /* AppDelegate.swift in Sources */,
 				AD1C05761C8599B30037922E /* HomeViewController.swift in Sources */,
