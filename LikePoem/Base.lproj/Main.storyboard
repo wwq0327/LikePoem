@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -27,6 +28,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="MvQ-0e-To8" kind="show" identifier="show Detail" id="D3D-Ea-cP1"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -37,7 +41,56 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Og-A7-cqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751" y="580"/>
+            <point key="canvasLocation" x="438" y="580"/>
+        </scene>
+        <!--Poem View Controller-->
+        <scene sceneID="R7p-J5-ygT">
+            <objects>
+                <viewController id="MvQ-0e-To8" customClass="PoemViewController" customModule="LikePoem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hUm-Gs-wIe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cok-P0-aij"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lgc-AN-qA4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mi-pa-lUC" customClass="myUILabel">
+                                <rect key="frame" x="20" y="40" width="560" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">虞美人·春花秋月何时了
+五代 李煜
+
+春花秋月何时了？
+往事知多少。
+小楼昨夜又东风，
+故国不堪回首月明中。
+
+雕栏玉砌应犹在，
+只是朱颜改。
+问君能有几多愁？
+恰似一江春水向东流。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Mi-pa-lUC" secondAttribute="trailing" id="FlY-c1-MX6"/>
+                            <constraint firstItem="Cok-P0-aij" firstAttribute="top" secondItem="5Mi-pa-lUC" secondAttribute="bottom" constant="20" id="bwx-Ok-tef"/>
+                            <constraint firstItem="5Mi-pa-lUC" firstAttribute="leading" secondItem="Lgc-AN-qA4" secondAttribute="leadingMargin" id="fuA-km-ztU"/>
+                            <constraint firstItem="5Mi-pa-lUC" firstAttribute="top" secondItem="hUm-Gs-wIe" secondAttribute="bottom" constant="20" id="n8O-X4-YnF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wBj-8O-atv"/>
+                    <connections>
+                        <outlet property="poemTextLabel" destination="5Mi-pa-lUC" id="hql-pS-WW8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tux-Ux-qWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190" y="580"/>
         </scene>
     </scenes>
 </document>

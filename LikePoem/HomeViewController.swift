@@ -39,15 +39,21 @@ class HomeViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+       
+        if segue.identifier == "show Detail" {
+            if let vc = segue.destinationViewController as? PoemViewController {
+                if let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell) {
+                    vc.poemText = poems[indexPath.row]
+                }
+            }
+        }
     }
-    */
+
 
     // MARK: UICollectionViewDataSource
 
@@ -68,8 +74,18 @@ class HomeViewController: UICollectionViewController {
         // Configure the cell
         
         cell.poemTextLabel.text = poems[indexPath.row]
+        cell.poemTextLabel.font = UIFont(name: "FZSKBXKJW--GB1-0", size: 18)
+        cell.poemTextLabel.setLineHeight(1.6)
+        cell.poemTextLabel.textAlignment = .Center
+        cell.poemTextLabel.verticalAlignment = VerticalAlignmentTop
     
         return cell
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if let cell = collectionView.cellForItemAtIndexPath(indexPath) {
+            performSegueWithIdentifier("show Detail", sender: cell)
+        }
     }
 
     // MARK: UICollectionViewDelegate
@@ -102,5 +118,7 @@ class HomeViewController: UICollectionViewController {
     
     }
     */
+    
+    
 
 }

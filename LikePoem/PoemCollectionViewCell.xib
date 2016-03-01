@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,8 +14,8 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="283" height="371"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-i3-12N">
-                        <rect key="frame" x="15" y="27" width="253" height="318"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-i3-12N" customClass="myUILabel">
+                        <rect key="frame" x="8" y="28" width="267" height="315"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <string key="text">虞美人·春花秋月何时了
 五代 李煜
@@ -30,16 +31,16 @@
 恰似一江春水向东流。</string>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="9DB-i3-12N" secondAttribute="trailing" constant="15" id="BaO-wp-y7K"/>
-                <constraint firstItem="9DB-i3-12N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="HOf-jU-MzV"/>
-                <constraint firstItem="9DB-i3-12N" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="27" id="liX-FW-3p9"/>
-                <constraint firstAttribute="bottom" secondItem="9DB-i3-12N" secondAttribute="bottom" constant="26" id="qug-u9-7yc"/>
+                <constraint firstItem="9DB-i3-12N" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" constant="20" id="W8C-uQ-8RU"/>
+                <constraint firstItem="9DB-i3-12N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="Zl3-up-Qmf"/>
+                <constraint firstAttribute="bottomMargin" secondItem="9DB-i3-12N" secondAttribute="bottom" constant="20" id="orA-qj-epD"/>
+                <constraint firstAttribute="trailingMargin" secondItem="9DB-i3-12N" secondAttribute="trailing" id="rrP-qq-XRT"/>
             </constraints>
             <size key="customSize" width="283" height="371"/>
             <connections>

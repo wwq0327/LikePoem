@@ -10,7 +10,7 @@ import UIKit
 
 class PoemCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var poemTextLabel: UILabel!
+    @IBOutlet weak var poemTextLabel: myUILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
