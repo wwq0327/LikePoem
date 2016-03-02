@@ -20,6 +20,7 @@
 		AD1C05811C85A8380037922E /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05801C85A8380037922E /* FontStyle.swift */; };
 		AD1C05851C85AAA30037922E /* myUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05841C85AAA30037922E /* myUILabel.m */; };
 		AD1C05AA1C85D4930037922E /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */; };
+		AD1C05AF1C86F8B30037922E /* AddPoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		AD1C05841C85AAA30037922E /* myUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myUILabel.m; sourceTree = "<group>"; };
 		AD1C05A81C85D4930037922E /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPoemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +75,7 @@
 		AD1C05601C8598D60037922E /* LikePoem */ = {
 			isa = PBXGroup;
 			children = (
-				AD1C05A81C85D4930037922E /* UINavigationBar+Awesome.h */,
-				AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */,
-				AD1C05831C85AAA30037922E /* myUILabel.h */,
-				AD1C05841C85AAA30037922E /* myUILabel.m */,
+				AD1C05AB1C86F6240037922E /* 第三方组件 */,
 				AD1C057D1C85A3940037922E /* Fonts */,
 				AD1C05731C8599540037922E /* CustomLayout.swift */,
 				AD1C05611C8598D60037922E /* AppDelegate.swift */,
@@ -90,6 +89,7 @@
 				AD1C057B1C859E650037922E /* PoemViewController.swift */,
 				AD1C05801C85A8380037922E /* FontStyle.swift */,
 				AD1C05821C85AAA20037922E /* LikePoem-Bridging-Header.h */,
+				AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */,
 			);
 			path = LikePoem;
 			sourceTree = "<group>";
@@ -100,6 +100,17 @@
 				AD1C057E1C85A3C00037922E /* 方正宋刻本秀楷简体.TTF */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		AD1C05AB1C86F6240037922E /* 第三方组件 */ = {
+			isa = PBXGroup;
+			children = (
+				AD1C05A81C85D4930037922E /* UINavigationBar+Awesome.h */,
+				AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */,
+				AD1C05831C85AAA30037922E /* myUILabel.h */,
+				AD1C05841C85AAA30037922E /* myUILabel.m */,
+			);
+			name = "第三方组件";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				AD1C05621C8598D60037922E /* AppDelegate.swift in Sources */,
 				AD1C05761C8599B30037922E /* HomeViewController.swift in Sources */,
 				AD1C05791C8599D50037922E /* PoemCollectionViewCell.swift in Sources */,
+				AD1C05AF1C86F8B30037922E /* AddPoemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +312,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LikePoem/LikePoem-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -313,6 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanqingwong.LikePoem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LikePoem/LikePoem-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

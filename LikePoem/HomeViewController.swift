@@ -15,7 +15,7 @@ class HomeViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -32,6 +32,10 @@ class HomeViewController: UICollectionViewController {
         // 布局
         let customlayout = CustomLayout()
         self.collectionView?.setCollectionViewLayout(customlayout, animated: true)
+
+        
+        
+    
     }
 
     override func didReceiveMemoryWarning() {
