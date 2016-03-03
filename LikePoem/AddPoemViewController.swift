@@ -20,6 +20,7 @@ class AddPoemViewController: UITableViewController {
     var isEditingMode = false
     var poem: Poem!
     
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
     weak var delegate: AddPoemViewControllerDelegate!
 
     @IBOutlet weak var titleLabel: UITextField!
@@ -48,6 +49,16 @@ class AddPoemViewController: UITableViewController {
     }
     
     @IBAction func saveClicked(sender: AnyObject) {
+        let contentCount = contentTextView.text.characters.count
+        
+        if contentCount == 0 {
+            let alertController = UIAlertController(title: "错误", message: "内容不能为空", preferredStyle: UIAlertControllerStyle.Alert)
+            let doneAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+            alertController.addAction(doneAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return
+            
+        }
         
         if isEditingMode {
             try! realm.write({ () -> Void in
@@ -56,9 +67,8 @@ class AddPoemViewController: UITableViewController {
                 poem.content = contentTextView.text
             })
             self.delegate.addPoemViewController(self, didFinishedReload: poem)
-//            print(poem)
-            
             self.dismissViewControllerAnimated(true, completion: nil)
+            
         } else {
             let newPoem = Poem()
             newPoem.title = titleLabel.text!

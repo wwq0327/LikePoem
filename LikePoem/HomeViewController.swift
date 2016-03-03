@@ -29,9 +29,6 @@ class HomeViewController: UICollectionViewController {
         // 布局
         let customlayout = CustomLayout()
         self.collectionView?.setCollectionViewLayout(customlayout, animated: true)
-        
-        
-        
     }
     
     override func viewWillAppear(animated: Bool) {

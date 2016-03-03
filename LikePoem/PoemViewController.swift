@@ -7,22 +7,29 @@
 //
 
 import UIKit
+import RealmSwift
+
+private let realm = try! Realm()
 
 class PoemViewController: UIViewController {
     
     var poem: Poem!
+    var titleTextLabel: UILabel!
+    var authorTextLabel: UILabel!
+    var poemTextLabel: myUILabel!
 
     @IBOutlet weak var scrollView: UIScrollView!
     var y: CGFloat = -64
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.navigationController?.navigationBar.lt_setBackgroundColor(UIColor().colorWithAlphaComponent(0))
         self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
         // title
-        let titleTextLabel = UILabel(frame: CGRectMake(0, y, UIScreen.mainScreen().bounds.width, 24))
+        titleTextLabel = UILabel(frame: CGRectMake(0, y, UIScreen.mainScreen().bounds.width, 24))
         titleTextLabel.textAlignment = .Center
         titleTextLabel.text = poem.title
         titleTextLabel.font = UIFont(name: "FZSKBXKJW--GB1-0", size: 24)
@@ -30,7 +37,7 @@ class PoemViewController: UIViewController {
         y += titleTextLabel.bounds.size.height + 10
         
         // author
-        let authorTextLabel = UILabel(frame: CGRectMake(0, y, UIScreen.mainScreen().bounds.width, 24))
+        authorTextLabel = UILabel(frame: CGRectMake(0, y, UIScreen.mainScreen().bounds.width, 24))
         authorTextLabel.textAlignment = .Center
         authorTextLabel.text = poem.author
         authorTextLabel.font = UIFont(name: "FZSKBXKJW--GB1-0", size: 16)
@@ -38,7 +45,7 @@ class PoemViewController: UIViewController {
         y += authorTextLabel.bounds.size.height + 10
         
         // content
-        let poemTextLabel = PoeLabel(fontname: "FZSKBXKJW--GB1-0", labelText: poem.content, fontSize: 18, lineHeight: 8)
+        poemTextLabel = PoeLabel(fontname: "FZSKBXKJW--GB1-0", labelText: poem.content, fontSize: 18, lineHeight: 8)
         poemTextLabel.frame.origin.y = y
         poemTextLabel.textAlignment = .Center
         scrollView.addSubview(poemTextLabel)
@@ -53,7 +60,7 @@ class PoemViewController: UIViewController {
         }
         
         self.scrollView.contentSize = labelSize
-
+	
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,8 +70,17 @@ class PoemViewController: UIViewController {
     
     @IBAction func close(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+        
     }
 
+    @IBAction func deletePoem(sender: AnyObject) {
+        try! realm.write({ () -> Void in
+            realm.delete(poem)
+    
+        })
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "show Edit" {
             if let nav = segue.destinationViewController as? UINavigationController {
@@ -81,6 +97,9 @@ class PoemViewController: UIViewController {
 extension PoemViewController: AddPoemViewControllerDelegate {
     func addPoemViewController(controller: AddPoemViewController, didFinishedReload item: Poem) {
         self.poem = item
+        titleTextLabel.text = item.title
+        authorTextLabel.text = item.author
+        poemTextLabel.text = item.content
     }
 }
 

@@ -263,7 +263,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4Ut-mA-kKk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="Fi5-f8-qp8" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navPoem" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="Fi5-f8-qp8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oly-CG-nPC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -315,6 +315,11 @@
                                     <segue destination="R13-pP-31H" kind="presentation" identifier="show Edit" id="EHs-Wd-LCG"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem title="删除" id="dSu-Vn-7el">
+                                <connections>
+                                    <action selector="deletePoem:" destination="dt7-ev-Ysn" id="75Z-e9-HM0"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -323,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukk-aY-AjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830" y="535"/>
+            <point key="canvasLocation" x="2828" y="580"/>
         </scene>
         <!--添加内容-->
         <scene sceneID="DF4-yb-njl">
@@ -343,7 +348,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZi-sE-bWv">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="标题（选填）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZi-sE-bWv">
                                                     <rect key="frame" x="18" y="15" width="564" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -358,7 +363,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="作者" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-6o-p79">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="作者（选填）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-6o-p79">
                                                     <rect key="frame" x="16" y="15" width="568" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -405,6 +410,7 @@
                     <connections>
                         <outlet property="authorLabel" destination="u9h-6o-p79" id="XAa-HU-5uz"/>
                         <outlet property="contentTextView" destination="x2L-Sw-A0X" id="zAm-VQ-fZw"/>
+                        <outlet property="saveBtn" destination="qNt-st-Feq" id="jJy-ps-2Ui"/>
                         <outlet property="titleLabel" destination="TZi-sE-bWv" id="yUa-JI-hrP"/>
                     </connections>
                 </tableViewController>
@@ -446,7 +452,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFE-AX-XjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2806" y="1365"/>
+            <point key="canvasLocation" x="2804" y="1379"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
