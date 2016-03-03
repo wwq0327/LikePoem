@@ -14,8 +14,12 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="283" height="420"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOR-yS-r98">
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="420"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-i3-12N" customClass="myUILabel">
-                        <rect key="frame" x="8" y="28" width="267" height="364"/>
+                        <rect key="frame" x="8" y="82" width="267" height="330"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <string key="text">虞美人·春花秋月何时了
 五代 李煜
@@ -33,20 +37,52 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feQ-Dr-n1U" customClass="myUILabel">
+                        <rect key="frame" x="8" y="13" width="267" height="24"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="Y6l-OF-cQc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z9-vT-B56" customClass="myUILabel">
+                        <rect key="frame" x="8" y="47" width="267" height="24"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="qRo-LQ-rDw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="9DB-i3-12N" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" constant="20" id="W8C-uQ-8RU"/>
-                <constraint firstItem="9DB-i3-12N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="Zl3-up-Qmf"/>
-                <constraint firstAttribute="bottomMargin" secondItem="9DB-i3-12N" secondAttribute="bottom" constant="20" id="orA-qj-epD"/>
-                <constraint firstAttribute="trailingMargin" secondItem="9DB-i3-12N" secondAttribute="trailing" id="rrP-qq-XRT"/>
+                <constraint firstItem="9DB-i3-12N" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottomMargin" id="1RE-uT-C8W"/>
+                <constraint firstItem="9z9-vT-B56" firstAttribute="top" secondItem="feQ-Dr-n1U" secondAttribute="bottom" constant="10" id="7gh-Pm-IXL"/>
+                <constraint firstAttribute="trailing" secondItem="SOR-yS-r98" secondAttribute="trailing" id="9IK-CT-BvM"/>
+                <constraint firstItem="9z9-vT-B56" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="Iw3-qC-Zr5"/>
+                <constraint firstItem="9DB-i3-12N" firstAttribute="top" secondItem="9z9-vT-B56" secondAttribute="bottom" constant="11" id="Mv9-vE-yGA"/>
+                <constraint firstItem="feQ-Dr-n1U" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" constant="5" id="U0P-1g-LjU"/>
+                <constraint firstItem="9z9-vT-B56" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailingMargin" id="XZF-zp-lGm"/>
+                <constraint firstItem="9DB-i3-12N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="dot-wd-cjl"/>
+                <constraint firstItem="9DB-i3-12N" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailingMargin" id="fjc-SY-VdU"/>
+                <constraint firstItem="SOR-yS-r98" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hZl-ef-265"/>
+                <constraint firstItem="feQ-Dr-n1U" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailingMargin" id="moL-YQ-thn"/>
+                <constraint firstItem="feQ-Dr-n1U" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="o0f-tL-MVD"/>
+                <constraint firstAttribute="bottom" secondItem="SOR-yS-r98" secondAttribute="bottom" id="paV-xC-R73"/>
+                <constraint firstItem="SOR-yS-r98" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sM8-t1-1aS"/>
             </constraints>
             <size key="customSize" width="283" height="420"/>
             <connections>
+                <outlet property="authorLabel" destination="9z9-vT-B56" id="JYF-4g-BNd"/>
                 <outlet property="poemTextLabel" destination="9DB-i3-12N" id="CNn-DL-ei0"/>
+                <outlet property="titleLabel" destination="feQ-Dr-n1U" id="2LF-QV-cVd"/>
             </connections>
-            <point key="canvasLocation" x="729.5" y="370"/>
+            <point key="canvasLocation" x="848.5" y="394"/>
         </collectionViewCell>
     </objects>
 </document>

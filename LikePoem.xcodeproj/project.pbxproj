@@ -16,12 +16,13 @@
 		AD1C05761C8599B30037922E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05751C8599B30037922E /* HomeViewController.swift */; };
 		AD1C05791C8599D50037922E /* PoemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05771C8599D50037922E /* PoemCollectionViewCell.swift */; };
 		AD1C057A1C8599D50037922E /* PoemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1C05781C8599D50037922E /* PoemCollectionViewCell.xib */; };
-		AD1C057C1C859E650037922E /* PoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C057B1C859E650037922E /* PoemViewController.swift */; };
 		AD1C057F1C85A3C00037922E /* 方正宋刻本秀楷简体.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AD1C057E1C85A3C00037922E /* 方正宋刻本秀楷简体.TTF */; };
 		AD1C05811C85A8380037922E /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05801C85A8380037922E /* FontStyle.swift */; };
 		AD1C05851C85AAA30037922E /* myUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05841C85AAA30037922E /* myUILabel.m */; };
 		AD1C05AA1C85D4930037922E /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */; };
 		AD1C05AF1C86F8B30037922E /* AddPoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */; };
+		AD21E1C91C871BE1000684E5 /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21E1C81C871BE1000684E5 /* Poem.swift */; };
+		AD21E1CD1C87E0FF000684E5 /* PoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21E1CC1C87E0FF000684E5 /* PoemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,6 @@
 		AD1C05751C8599B30037922E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AD1C05771C8599D50037922E /* PoemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD1C05781C8599D50037922E /* PoemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoemCollectionViewCell.xib; sourceTree = "<group>"; };
-		AD1C057B1C859E650037922E /* PoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemViewController.swift; sourceTree = "<group>"; };
 		AD1C057E1C85A3C00037922E /* 方正宋刻本秀楷简体.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正宋刻本秀楷简体.TTF"; sourceTree = "<group>"; };
 		AD1C05801C85A8380037922E /* FontStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		AD1C05821C85AAA20037922E /* LikePoem-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LikePoem-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		AD1C05A81C85D4930037922E /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPoemViewController.swift; sourceTree = "<group>"; };
+		AD21E1C81C871BE1000684E5 /* Poem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
+		AD21E1CC1C87E0FF000684E5 /* PoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemViewController.swift; sourceTree = "<group>"; };
 		CEBA46D96A200AB262C53DCF /* Pods-LikePoem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LikePoem.release.xcconfig"; path = "Pods/Target Support Files/Pods-LikePoem/Pods-LikePoem.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,10 +112,11 @@
 				AD1C05751C8599B30037922E /* HomeViewController.swift */,
 				AD1C05771C8599D50037922E /* PoemCollectionViewCell.swift */,
 				AD1C05781C8599D50037922E /* PoemCollectionViewCell.xib */,
-				AD1C057B1C859E650037922E /* PoemViewController.swift */,
 				AD1C05801C85A8380037922E /* FontStyle.swift */,
 				AD1C05821C85AAA20037922E /* LikePoem-Bridging-Header.h */,
 				AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */,
+				AD21E1C81C871BE1000684E5 /* Poem.swift */,
+				AD21E1CC1C87E0FF000684E5 /* PoemViewController.swift */,
 			);
 			path = LikePoem;
 			sourceTree = "<group>";
@@ -261,8 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD21E1CD1C87E0FF000684E5 /* PoemViewController.swift in Sources */,
+				AD21E1C91C871BE1000684E5 /* Poem.swift in Sources */,
 				AD1C05741C8599540037922E /* CustomLayout.swift in Sources */,
-				AD1C057C1C859E650037922E /* PoemViewController.swift in Sources */,
 				AD1C05811C85A8380037922E /* FontStyle.swift in Sources */,
 				AD1C05AA1C85D4930037922E /* UINavigationBar+Awesome.m in Sources */,
 				AD1C05851C85AAA30037922E /* myUILabel.m in Sources */,

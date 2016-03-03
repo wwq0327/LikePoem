@@ -91,7 +91,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="LYY-cZ-cPk" kind="push" id="QUj-f2-bxE"/>
+                                            <segue destination="LYY-cZ-cPk" kind="show" id="QUj-f2-bxE"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="MgA-XM-QGd">
@@ -110,7 +110,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="6Vb-8L-cvs" kind="push" id="yR0-29-BAl"/>
+                                            <segue destination="6Vb-8L-cvs" kind="show" id="yR0-29-BAl"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -133,7 +133,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="YHi-Vr-iEI" kind="push" id="yO1-rR-uY8"/>
+                                            <segue destination="YHi-Vr-iEI" kind="show" id="yO1-rR-uY8"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -191,7 +191,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="Suh-lx-dim">
                                 <connections>
-                                    <segue destination="R13-pP-31H" kind="modal" identifier="addPoem" id="5cm-0Q-a3j"/>
+                                    <segue destination="R13-pP-31H" kind="presentation" identifier="addPoem" id="5cm-0Q-a3j"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="search" id="FnI-Fb-LSL"/>
@@ -260,48 +260,6 @@
             </objects>
             <point key="canvasLocation" x="2822" y="-162"/>
         </scene>
-        <!--Poem View Controller-->
-        <scene sceneID="R7p-J5-ygT">
-            <objects>
-                <viewController id="MvQ-0e-To8" customClass="PoemViewController" customModule="LikePoem" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hUm-Gs-wIe"/>
-                        <viewControllerLayoutGuide type="bottom" id="Cok-P0-aij"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lgc-AN-qA4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Id-sb-TqQ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="0Id-sb-TqQ" firstAttribute="leading" secondItem="Lgc-AN-qA4" secondAttribute="leading" id="gqO-EM-pQR"/>
-                            <constraint firstItem="Cok-P0-aij" firstAttribute="top" secondItem="0Id-sb-TqQ" secondAttribute="bottom" id="jrQ-1L-dCc"/>
-                            <constraint firstItem="0Id-sb-TqQ" firstAttribute="top" secondItem="hUm-Gs-wIe" secondAttribute="bottom" id="x5a-l8-Iwu"/>
-                            <constraint firstAttribute="trailing" secondItem="0Id-sb-TqQ" secondAttribute="trailing" id="xs1-YF-1Ow"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="wBj-8O-atv">
-                        <barButtonItem key="leftBarButtonItem" title="关闭" id="PAd-Jl-0ch">
-                            <connections>
-                                <action selector="backClicked:" destination="MvQ-0e-To8" id="jz1-ph-FsJ"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="sML-st-js1">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="scrollView" destination="0Id-sb-TqQ" id="960-S0-W1W"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tux-Ux-qWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2814" y="580"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Ut-mA-kKk">
             <objects>
@@ -313,12 +271,59 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MvQ-0e-To8" kind="relationship" relationship="rootViewController" id="a57-O0-ILT"/>
+                        <segue destination="dt7-ev-Ysn" kind="relationship" relationship="rootViewController" id="61x-PS-Hx5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbK-8U-djJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2002" y="580"/>
+        </scene>
+        <!--Poem View Controller-->
+        <scene sceneID="Xnb-HP-WaL">
+            <objects>
+                <viewController id="dt7-ev-Ysn" customClass="PoemViewController" customModule="LikePoem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zcy-2s-Zio"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ca3-LS-LoH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GI4-ZL-rpJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vg6-bH-32O">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vg6-bH-32O" firstAttribute="leading" secondItem="GI4-ZL-rpJ" secondAttribute="leading" id="FpT-Vu-6ie"/>
+                            <constraint firstItem="Ca3-LS-LoH" firstAttribute="top" secondItem="Vg6-bH-32O" secondAttribute="bottom" id="OsC-as-dCW"/>
+                            <constraint firstAttribute="trailing" secondItem="Vg6-bH-32O" secondAttribute="trailing" id="ahk-ga-aqn"/>
+                            <constraint firstItem="Vg6-bH-32O" firstAttribute="top" secondItem="Zcy-2s-Zio" secondAttribute="bottom" id="wn5-Sd-KA3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KTV-C3-YEk">
+                        <barButtonItem key="leftBarButtonItem" title="关闭" id="irG-NH-vK6">
+                            <connections>
+                                <action selector="close:" destination="dt7-ev-Ysn" id="v7S-RH-gGD"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="4aE-uf-1gi"/>
+                            <barButtonItem title="编辑" id="pjG-qK-r5p">
+                                <connections>
+                                    <segue destination="R13-pP-31H" kind="presentation" identifier="show Edit" id="EHs-Wd-LCG"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="Vg6-bH-32O" id="M40-j8-o3J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukk-aY-AjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2830" y="535"/>
         </scene>
         <!--添加内容-->
         <scene sceneID="DF4-yb-njl">
@@ -372,7 +377,7 @@
                                                     <rect key="frame" x="17" y="8" width="566" height="283"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -397,10 +402,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="authorLabel" destination="u9h-6o-p79" id="XAa-HU-5uz"/>
+                        <outlet property="contentTextView" destination="x2L-Sw-A0X" id="zAm-VQ-fZw"/>
+                        <outlet property="titleLabel" destination="TZi-sE-bWv" id="yUa-JI-hrP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJD-53-ozL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830" y="1307"/>
+            <point key="canvasLocation" x="3489" y="1365"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="keN-zX-bSd">
@@ -436,7 +446,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFE-AX-XjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="1307"/>
+            <point key="canvasLocation" x="2806" y="1365"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EHs-Wd-LCG"/>
+    </inferredMetricsTieBreakers>
 </document>
