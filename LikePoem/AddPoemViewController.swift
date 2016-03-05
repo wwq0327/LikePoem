@@ -30,6 +30,10 @@ class AddPoemViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.lt_setBackgroundColor(UIColor().colorWithAlphaComponent(0))
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
         if isEditingMode {
             title = "编辑内容"
             titleLabel.text = poem.title

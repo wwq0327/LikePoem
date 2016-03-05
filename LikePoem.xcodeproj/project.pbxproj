@@ -23,6 +23,17 @@
 		AD1C05AF1C86F8B30037922E /* AddPoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */; };
 		AD21E1C91C871BE1000684E5 /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21E1C81C871BE1000684E5 /* Poem.swift */; };
 		AD21E1CD1C87E0FF000684E5 /* PoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21E1CC1C87E0FF000684E5 /* PoemViewController.swift */; };
+		AD21E1F21C8A8A64000684E5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21E1F11C8A8A64000684E5 /* SettingsViewController.swift */; };
+		AD21E1F41C8A906E000684E5 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21E1F31C8A906E000684E5 /* FontViewController.swift */; };
+		AD21E1F61C8A9080000684E5 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21E1F51C8A9080000684E5 /* ColorViewController.swift */; };
+		AD21E1F81C8A9C47000684E5 /* Kaiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD21E1F71C8A9C47000684E5 /* Kaiti.ttf */; };
+		AD21E1FA1C8A9C76000684E5 /* Fangsong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD21E1F91C8A9C76000684E5 /* Fangsong.ttf */; };
+		AD21E1FC1C8A9C96000684E5 /* Wyue-GutiFangsong-NC_deliverable.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD21E1FB1C8A9C96000684E5 /* Wyue-GutiFangsong-NC_deliverable.otf */; };
+		AD21E1FE1C8B0866000684E5 /* SentyZHAO.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD21E1FD1C8B0866000684E5 /* SentyZHAO.otf */; };
+		AD21E2001C8B0A8D000684E5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21E1FF1C8B0A8D000684E5 /* AboutViewController.swift */; };
+		AD21E2031C8B161F000684E5 /* ColorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21E2011C8B161F000684E5 /* ColorViewCell.swift */; };
+		AD21E2041C8B161F000684E5 /* ColorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD21E2021C8B161F000684E5 /* ColorViewCell.xib */; };
+		ADA106B31C8B1CA80042B17B /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA106B21C8B1CA80042B17B /* UIColor+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +59,18 @@
 		AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPoemViewController.swift; sourceTree = "<group>"; };
 		AD21E1C81C871BE1000684E5 /* Poem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
 		AD21E1CC1C87E0FF000684E5 /* PoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemViewController.swift; sourceTree = "<group>"; };
+		AD21E1EE1C8A835E000684E5 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		AD21E1F11C8A8A64000684E5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AD21E1F31C8A906E000684E5 /* FontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
+		AD21E1F51C8A9080000684E5 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		AD21E1F71C8A9C47000684E5 /* Kaiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kaiti.ttf; sourceTree = "<group>"; };
+		AD21E1F91C8A9C76000684E5 /* Fangsong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fangsong.ttf; sourceTree = "<group>"; };
+		AD21E1FB1C8A9C96000684E5 /* Wyue-GutiFangsong-NC_deliverable.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wyue-GutiFangsong-NC_deliverable.otf"; sourceTree = "<group>"; };
+		AD21E1FD1C8B0866000684E5 /* SentyZHAO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SentyZHAO.otf; sourceTree = "<group>"; };
+		AD21E1FF1C8B0A8D000684E5 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		AD21E2011C8B161F000684E5 /* ColorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewCell.swift; sourceTree = "<group>"; };
+		AD21E2021C8B161F000684E5 /* ColorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewCell.xib; sourceTree = "<group>"; };
+		ADA106B21C8B1CA80042B17B /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		CEBA46D96A200AB262C53DCF /* Pods-LikePoem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LikePoem.release.xcconfig"; path = "Pods/Target Support Files/Pods-LikePoem/Pods-LikePoem.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +124,7 @@
 		AD1C05601C8598D60037922E /* LikePoem */ = {
 			isa = PBXGroup;
 			children = (
+				AD21E1F01C8A8A42000684E5 /* 设置 */,
 				AD1C05AB1C86F6240037922E /* 第三方组件 */,
 				AD1C057D1C85A3940037922E /* Fonts */,
 				AD1C05731C8599540037922E /* CustomLayout.swift */,
@@ -117,6 +141,9 @@
 				AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */,
 				AD21E1C81C871BE1000684E5 /* Poem.swift */,
 				AD21E1CC1C87E0FF000684E5 /* PoemViewController.swift */,
+				AD21E1EE1C8A835E000684E5 /* MyPlayground.playground */,
+				AD21E2011C8B161F000684E5 /* ColorViewCell.swift */,
+				AD21E2021C8B161F000684E5 /* ColorViewCell.xib */,
 			);
 			path = LikePoem;
 			sourceTree = "<group>";
@@ -124,6 +151,10 @@
 		AD1C057D1C85A3940037922E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				AD21E1FD1C8B0866000684E5 /* SentyZHAO.otf */,
+				AD21E1FB1C8A9C96000684E5 /* Wyue-GutiFangsong-NC_deliverable.otf */,
+				AD21E1F91C8A9C76000684E5 /* Fangsong.ttf */,
+				AD21E1F71C8A9C47000684E5 /* Kaiti.ttf */,
 				AD1C057E1C85A3C00037922E /* 方正宋刻本秀楷简体.TTF */,
 			);
 			name = Fonts;
@@ -136,8 +167,20 @@
 				AD1C05A91C85D4930037922E /* UINavigationBar+Awesome.m */,
 				AD1C05831C85AAA30037922E /* myUILabel.h */,
 				AD1C05841C85AAA30037922E /* myUILabel.m */,
+				ADA106B21C8B1CA80042B17B /* UIColor+Hex.swift */,
 			);
 			name = "第三方组件";
+			sourceTree = "<group>";
+		};
+		AD21E1F01C8A8A42000684E5 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				AD21E1F11C8A8A64000684E5 /* SettingsViewController.swift */,
+				AD21E1F31C8A906E000684E5 /* FontViewController.swift */,
+				AD21E1F51C8A9080000684E5 /* ColorViewController.swift */,
+				AD21E1FF1C8B0A8D000684E5 /* AboutViewController.swift */,
+			);
+			name = "设置";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +244,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD21E1FA1C8A9C76000684E5 /* Fangsong.ttf in Resources */,
 				AD1C057F1C85A3C00037922E /* 方正宋刻本秀楷简体.TTF in Resources */,
+				AD21E1FC1C8A9C96000684E5 /* Wyue-GutiFangsong-NC_deliverable.otf in Resources */,
 				AD1C056C1C8598D60037922E /* LaunchScreen.storyboard in Resources */,
 				AD1C05691C8598D60037922E /* Assets.xcassets in Resources */,
 				AD1C05671C8598D60037922E /* Main.storyboard in Resources */,
+				AD21E2041C8B161F000684E5 /* ColorViewCell.xib in Resources */,
 				AD1C057A1C8599D50037922E /* PoemCollectionViewCell.xib in Resources */,
+				AD21E1FE1C8B0866000684E5 /* SentyZHAO.otf in Resources */,
+				AD21E1F81C8A9C47000684E5 /* Kaiti.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,15 +313,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD21E1CD1C87E0FF000684E5 /* PoemViewController.swift in Sources */,
+				AD21E1F61C8A9080000684E5 /* ColorViewController.swift in Sources */,
+				AD21E1F41C8A906E000684E5 /* FontViewController.swift in Sources */,
 				AD21E1C91C871BE1000684E5 /* Poem.swift in Sources */,
+				AD21E1F21C8A8A64000684E5 /* SettingsViewController.swift in Sources */,
 				AD1C05741C8599540037922E /* CustomLayout.swift in Sources */,
 				AD1C05811C85A8380037922E /* FontStyle.swift in Sources */,
 				AD1C05AA1C85D4930037922E /* UINavigationBar+Awesome.m in Sources */,
 				AD1C05851C85AAA30037922E /* myUILabel.m in Sources */,
+				ADA106B31C8B1CA80042B17B /* UIColor+Hex.swift in Sources */,
 				AD1C05621C8598D60037922E /* AppDelegate.swift in Sources */,
+				AD21E2001C8B0A8D000684E5 /* AboutViewController.swift in Sources */,
 				AD1C05761C8599B30037922E /* HomeViewController.swift in Sources */,
 				AD1C05791C8599D50037922E /* PoemCollectionViewCell.swift in Sources */,
 				AD1C05AF1C86F8B30037922E /* AddPoemViewController.swift in Sources */,
+				AD21E2031C8B161F000684E5 /* ColorViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

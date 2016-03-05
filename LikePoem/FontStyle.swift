@@ -9,15 +9,18 @@
 import Foundation
 import UIKit
 
-struct FontStyle {
-    var fontName: String
-    var fontColor: UIColor
-    var fontSize: Int
+struct FontID {
+    static let fontSize = "fontSize"
+    static let fontColor = "fontColor"
+    static let fontName = "fontName"
     
-    init(fontName: String, fontSize: Int, fontColor: UIColor=UIColor.blackColor()) {
-        self.fontName = fontName
-        self.fontSize = fontSize
-        self.fontColor = fontColor
+    enum FontFamily: String {
+        case Pingfang = "PingFangSC-Light"
+        case Songkeben = "FZSKBXKJW--GB1-0"
+        case Kaiti = "KaiTi"
+        case Fangsong = "FangSong"
+        case Wenyue = "Wyue-GutiFangsong-NC"
+        case Zhao = "SentyZHAO"
     }
 }
 

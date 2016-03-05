@@ -11,7 +11,7 @@ import UIKit
 let screenBounds = UIScreen.mainScreen().bounds
 // cell 的宽度与高度设置
 let itemWidth = screenBounds.width - 120.0
-let itemHeith = screenBounds.height - 160.0
+let itemHeith = screenBounds.height - 200.0
 
 class CustomLayout: UICollectionViewFlowLayout {
     override init() {

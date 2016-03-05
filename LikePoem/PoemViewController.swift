@@ -17,12 +17,40 @@ class PoemViewController: UIViewController {
     var titleTextLabel: UILabel!
     var authorTextLabel: UILabel!
     var poemTextLabel: myUILabel!
+    
+    var fontName: String!
+    var backColor: Int!
+    var textColor: Int!
 
     @IBOutlet weak var scrollView: UIScrollView!
-    var y: CGFloat = -64
+    var y: CGFloat = 0
+    
+    
+    var defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if  defaults.stringForKey(FontID.fontName) == nil {
+            fontName = FontID.FontFamily.Songkeben.rawValue
+        } else {
+            fontName = defaults.stringForKey(FontID.fontName)
+        }
+        
+        if defaults.integerForKey("backColor") == 0 {
+            backColor = 0xffffff
+        } else {
+            backColor = defaults.integerForKey("backColor")
+        }
+        
+        if defaults.integerForKey("textColor") == 0 {
+            textColor = 0x000000
+        } else {
+            textColor = defaults.integerForKey("textColor")
+        }
+        
+        view.backgroundColor = UIColor(hex: backColor)
         
         self.navigationController?.navigationBar.lt_setBackgroundColor(UIColor().colorWithAlphaComponent(0))
         self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
@@ -31,22 +59,26 @@ class PoemViewController: UIViewController {
         // title
         titleTextLabel = UILabel(frame: CGRectMake(0, y, UIScreen.mainScreen().bounds.width, 24))
         titleTextLabel.textAlignment = .Center
+        titleTextLabel.textColor = UIColor(hex: textColor)
         titleTextLabel.text = poem.title
-        titleTextLabel.font = UIFont(name: "FZSKBXKJW--GB1-0", size: 24)
+        titleTextLabel.font = UIFont(name: fontName, size: 24)
         scrollView.addSubview(titleTextLabel)
         y += titleTextLabel.bounds.size.height + 10
         
         // author
         authorTextLabel = UILabel(frame: CGRectMake(0, y, UIScreen.mainScreen().bounds.width, 24))
         authorTextLabel.textAlignment = .Center
+        authorTextLabel.textColor = UIColor(hex: textColor)
         authorTextLabel.text = poem.author
-        authorTextLabel.font = UIFont(name: "FZSKBXKJW--GB1-0", size: 16)
+        authorTextLabel.font = UIFont(name: fontName, size: 16)
         scrollView.addSubview(authorTextLabel)
         y += authorTextLabel.bounds.size.height + 10
         
         // content
-        poemTextLabel = PoeLabel(fontname: "FZSKBXKJW--GB1-0", labelText: poem.content, fontSize: 18, lineHeight: 8)
+        let fontSize = defaults.integerForKey(FontID.fontSize)
+        poemTextLabel = PoeLabel(fontname: fontName, labelText: poem.content, fontSize: CGFloat(fontSize), lineHeight: 8)
         poemTextLabel.frame.origin.y = y
+        poemTextLabel.textColor = UIColor(hex: textColor)
         poemTextLabel.textAlignment = .Center
         scrollView.addSubview(poemTextLabel)
         y += poemTextLabel.bounds.size.height + 10
