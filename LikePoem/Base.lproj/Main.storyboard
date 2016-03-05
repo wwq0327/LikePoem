@@ -343,7 +343,11 @@
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="action" id="4aE-uf-1gi"/>
+                            <barButtonItem systemItem="action" id="4aE-uf-1gi">
+                                <connections>
+                                    <action selector="tapActiion:" destination="dt7-ev-Ysn" id="y2h-6A-7Hv"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="编辑" id="pjG-qK-r5p">
                                 <connections>
                                     <segue destination="R13-pP-31H" kind="presentation" identifier="show Edit" id="EHs-Wd-LCG"/>
@@ -493,6 +497,6 @@
         <image name="500px" width="658" height="658"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5cm-0Q-a3j"/>
+        <segue reference="EHs-Wd-LCG"/>
     </inferredMetricsTieBreakers>
 </document>

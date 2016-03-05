@@ -59,7 +59,6 @@
 		AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPoemViewController.swift; sourceTree = "<group>"; };
 		AD21E1C81C871BE1000684E5 /* Poem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
 		AD21E1CC1C87E0FF000684E5 /* PoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemViewController.swift; sourceTree = "<group>"; };
-		AD21E1EE1C8A835E000684E5 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		AD21E1F11C8A8A64000684E5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AD21E1F31C8A906E000684E5 /* FontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
 		AD21E1F51C8A9080000684E5 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +140,6 @@
 				AD1C05AE1C86F8B30037922E /* AddPoemViewController.swift */,
 				AD21E1C81C871BE1000684E5 /* Poem.swift */,
 				AD21E1CC1C87E0FF000684E5 /* PoemViewController.swift */,
-				AD21E1EE1C8A835E000684E5 /* MyPlayground.playground */,
 				AD21E2011C8B161F000684E5 /* ColorViewCell.swift */,
 				AD21E2021C8B161F000684E5 /* ColorViewCell.xib */,
 			);

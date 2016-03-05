@@ -32,6 +32,7 @@ class PoemViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
         if  defaults.stringForKey(FontID.fontName) == nil {
             fontName = FontID.FontFamily.Songkeben.rawValue
         } else {
@@ -92,6 +93,10 @@ class PoemViewController: UIViewController {
         }
         
         self.scrollView.contentSize = labelSize
+        print(scrollView.frame)
+        print(view.frame)
+        
+
 	
     }
 
@@ -123,6 +128,49 @@ class PoemViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func tapActiion(sender: AnyObject) {
+        
+        // 创建alertView
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        // 取消
+        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
+        optionMenu.addAction(cancelAction)
+        
+        // 分享
+        let sharedAction = UIAlertAction(title: "分享", style: UIAlertActionStyle.Default) { (action) -> Void in
+            print("分享")
+            self.share()
+
+        }
+        optionMenu.addAction(sharedAction)
+        
+        
+        self.presentViewController(optionMenu, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    func share() {
+        let scale = UIScreen.mainScreen().scale
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, scale)
+        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let shareString = "\(poem.title)\n \(poem.author)\n \(poem.content)"
+        let activity = UIActivity()
+        
+        let activityItems = [image, shareString]
+        let activities = [activity]
+        
+        let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: activities)
+        
+        self.presentViewController(activityController, animated: true, completion: nil)
     }
 }
 
