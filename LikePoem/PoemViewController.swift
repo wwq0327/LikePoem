@@ -40,12 +40,14 @@ class PoemViewController: UIViewController {
         }
         
         if defaults.integerForKey("backColor") == 0 {
+            // 白色
             backColor = 0xffffff
         } else {
             backColor = defaults.integerForKey("backColor")
         }
         
         if defaults.integerForKey("textColor") == 0 {
+            // 字颜色为黑色
             textColor = 0x000000
         } else {
             textColor = defaults.integerForKey("textColor")
@@ -93,9 +95,6 @@ class PoemViewController: UIViewController {
         }
         
         self.scrollView.contentSize = labelSize
-        print(scrollView.frame)
-        print(view.frame)
-        
 
 	
     }
@@ -108,14 +107,6 @@ class PoemViewController: UIViewController {
     @IBAction func close(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
         
-    }
-
-    @IBAction func deletePoem(sender: AnyObject) {
-        try! realm.write({ () -> Void in
-            realm.delete(poem)
-    
-        })
-        dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -141,12 +132,33 @@ class PoemViewController: UIViewController {
         
         // 分享
         let sharedAction = UIAlertAction(title: "分享", style: UIAlertActionStyle.Default) { (action) -> Void in
-            print("分享")
             self.share()
 
         }
         optionMenu.addAction(sharedAction)
         
+        // 编辑
+        let editAction = UIAlertAction(title: "编辑", style: .Default) { (action) -> Void in
+            if let editNav = self.storyboard?.instantiateViewControllerWithIdentifier("editNav") as? UINavigationController {
+                if let vc = editNav.topViewController as? AddPoemViewController {
+                    vc.isEditingMode = true
+                    vc.delegate = self
+                    vc.poem = self.poem
+                }
+                self.presentViewController(editNav, animated: true, completion: nil)
+            }
+        }
+        optionMenu.addAction(editAction)
+        
+        // 删除
+        let deleteAction = UIAlertAction(title: "删除", style: UIAlertActionStyle.Default) { (action) -> Void in
+            try! realm.write({ () -> Void in
+                realm.delete(self.poem)
+                
+            })
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        optionMenu.addAction(deleteAction)
         
         self.presentViewController(optionMenu, animated: true, completion: nil)
         

@@ -42,7 +42,7 @@ class FontViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        cell.textLabel?.text = "美好的文字岂可辜负？ -- 美句。"
+        cell.textLabel?.text = "美好的文字岂可辜负？ -- 记诗。"
         cell.textLabel?.font = UIFont(name: fontList[indexPath.row], size: 16)
         
         if indexPath.row == defaults.integerForKey("checkIndex") {
