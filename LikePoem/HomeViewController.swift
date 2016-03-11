@@ -21,6 +21,7 @@ class HomeViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        firstLaunch()
         
 //        self.navigationController?.navigationBar.lt_setBackgroundColor(UIColor().colorWithAlphaComponent(0))
         self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
@@ -58,6 +59,21 @@ class HomeViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func firstLaunch() {
+        let isFirst = defaults.boolForKey("isFirst")
+        if !isFirst {
+            let firstPoem = Poem()
+            firstPoem.title = "第一首诗"
+            firstPoem.author = "记诗"
+            firstPoem.content = "当你想到或看到\n一段美好的文字，\n它让你心灵为之一颤，\n想记录以作留念，\n并将它分享给你的友人。\n此时，\n我们已为你准备好了一切！"
+            
+            try! realm.write({ () -> Void in
+                realm.add(firstPoem)
+            })
+            
+            defaults.setBool(true, forKey: "isFirst")
+        }
+    }
 
     // MARK: - Navigation
 

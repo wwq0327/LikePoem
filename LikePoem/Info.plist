@@ -24,6 +24,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>MingLiU.ttf</string>
 		<string>SentyZHAO.otf</string>
 		<string>Wyue-GutiFangsong-NC_deliverable.otf</string>
 		<string>Fangsong.ttf</string>
