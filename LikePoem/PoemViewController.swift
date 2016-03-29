@@ -32,8 +32,6 @@ class PoemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         if  defaults.stringForKey(FontID.fontName) == nil {
             fontName = FontID.FontFamily.Songkeben.rawValue
         } else {
@@ -96,6 +94,7 @@ class PoemViewController: UIViewController {
             labelSize = CGSizeMake(UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height )
         } else {
             labelSize = CGSizeMake(poemTextLabel.frame.size.width, y )
+            
 
         }
         
@@ -138,6 +137,7 @@ class PoemViewController: UIViewController {
         // 分享
         let sharedAction = UIAlertAction(title: "分享", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.share()
+//            self.getImageOfScrollView()
 
         }
         optionMenu.addAction(sharedAction)
@@ -174,9 +174,13 @@ class PoemViewController: UIViewController {
     func share() {
         let scale = UIScreen.mainScreen().scale
         
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, scale)
-        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let size = CGSizeMake(self.view.bounds.width, self.scrollView.contentSize.height + 84)
+        UIGraphicsBeginImageContextWithOptions(size, true, scale)
+
+        self.scrollView.frame = CGRectMake(0, 0, self.view.bounds.width, self.scrollView.contentSize.height + 84)
+        self.scrollView.backgroundColor = UIColor(hex: backColor)
         
+        self.view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -190,110 +194,7 @@ class PoemViewController: UIViewController {
         
         self.presentViewController(activityController, animated: true, completion: nil)
     }
-    /*
-    func getImageOfScrollView() {
-        var image = UIImage()
-        let scale = UIScreen.mainScreen().scale
-        
-        UIGraphicsBeginImageContextWithOptions(self.scrollView.contentSize, false, scale)
-        
-        // save initial values
-        let saveContentOffset = self.scrollView.contentOffset
-        let saveFrame = self.scrollView.frame
-        let savedBackgroundColor = self.scrollView.backgroundColor
-        
-        // reset offset to top left point
-        self.scrollView.contentOffset = CGPointZero
-        // set frame to content size
-        self.scrollView.frame = CGRectMake(0, 0, self.scrollView.contentSize.width, self.scrollView.contentSize.height)
-        // remove background
-        self.scrollView.backgroundColor = UIColor.clearColor()
-        
-        // make temp view with scroll view content size
-        // a workaround for issue when image on ipad was drawn incorrectly
-        let tempView = UIView(frame: CGRectMake(0, 0, self.scrollView.contentSize.width, self.scrollView.contentSize.height))
-        
-        // save superview
-        let tempSuperView = self.scrollView.superview
-        // remove scrollview from old superview
-        self.scrollView.removeFromSuperview()
-        // and add to tempView
-        tempView.addSubview(self.scrollView)
-        
-        // render view
-        // drawViewHeirachyInRect not working correctly
-        tempView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        image = UIGraphicsGetImageFromCurrentImageContext()
-        
-        // and return everything back
-        tempView.subviews[0].removeFromSuperview()
-        tempSuperView?.addSubview(self.scrollView)
-        
-        // restore saved settings
-        self.scrollView.contentOffset = saveContentOffset
-        self.scrollView.frame = saveFrame
-        self.scrollView.backgroundColor = savedBackgroundColor
-        
-        UIGraphicsEndImageContext()
-        
-        let shareString = "\(poem.title)\n \(poem.author)\n \(poem.content)"
-        let activity = UIActivity()
-        
-        let activityItems = [image, shareString]
-        let activities = [activity]
-        
-        let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: activities)
-        
-        self.presentViewController(activityController, animated: true, completion: nil)
-        
-        
-    } */
     
-    /*
-    func getImageOfScrollView() {
-        var image = UIImage()
-        // let scale = UIScreen.mainScreen().scale
-        
-        UIGraphicsBeginImageContextWithOptions(self.scrollView.contentSize, false, 0.0)
-        
-        // save initial values
-        let saveContentOffset = self.scrollView.contentOffset
-        let saveFrame = self.scrollView.frame
-        let savedBackgroundColor = self.scrollView.backgroundColor
-        
-        // reset offset to top left point
-        self.scrollView.contentOffset = CGPointZero
-        // set frame to content size
-        self.scrollView.frame = CGRectMake(0, 0, self.scrollView.contentSize.width, self.scrollView.contentSize.height)
-        // remove background
-        self.scrollView.backgroundColor = UIColor.clearColor()
-        
-        
-        // render view
-        // drawViewHeirachyInRect not working correctly
-        self.scrollView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        image = UIGraphicsGetImageFromCurrentImageContext()
-    
-        
-        // restore saved settings
-        self.scrollView.contentOffset = saveContentOffset
-        self.scrollView.frame = saveFrame
-        self.scrollView.backgroundColor = savedBackgroundColor
-        
-        UIGraphicsEndImageContext()
-        
-        let shareString = "\(poem.title)\n \(poem.author)\n \(poem.content)"
-        let activity = UIActivity()
-        
-        let activityItems = [image, shareString]
-        let activities = [activity]
-        
-        let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: activities)
-        
-        self.presentViewController(activityController, animated: true, completion: nil)
-        
-        
-    } */
 }
 
 extension PoemViewController: AddPoemViewControllerDelegate {
@@ -305,6 +206,7 @@ extension PoemViewController: AddPoemViewControllerDelegate {
         authorTextLabel.font = UIFont(name: fontName, size: 16)
         poemTextLabel.text = item.content
         poemTextLabel.font = UIFont(name: fontName, size: CGFloat(defaults.integerForKey("fontSize")))
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

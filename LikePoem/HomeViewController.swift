@@ -49,7 +49,8 @@ class HomeViewController: UICollectionViewController {
             fontName = defaults.stringForKey(FontID.fontName)
         }
         
-        poems = realm.objects(Poem)
+        // 按创建的时候作降序排列
+        poems = realm.objects(Poem).sorted("createAt", ascending: false)
         
         self.collectionView?.reloadData()
     }

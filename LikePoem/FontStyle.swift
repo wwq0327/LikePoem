@@ -19,9 +19,7 @@ struct FontID {
         case Songkeben = "FZSKBXKJW--GB1-0"
         case Kaiti = "KaiTi"
         case Fangsong = "FangSong"
-        case Wenyue = "Wyue-GutiFangsong-NC"
         case Zhao = "SentyZHAO"
-        case MingLiu = "MingLiU"
     }
 }
 

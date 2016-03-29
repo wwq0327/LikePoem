@@ -16,9 +16,7 @@ class FontViewController: UITableViewController {
         FontID.FontFamily.Pingfang.rawValue,
         FontID.FontFamily.Kaiti.rawValue,
         FontID.FontFamily.Fangsong.rawValue,
-        FontID.FontFamily.Wenyue.rawValue,
-        FontID.FontFamily.Zhao.rawValue,
-        FontID.FontFamily.MingLiu.rawValue]
+        FontID.FontFamily.Zhao.rawValue]
     
     var defaults = NSUserDefaults.standardUserDefaults()
     var checkedIndexPath: NSIndexPath?
@@ -83,12 +81,8 @@ class FontViewController: UITableViewController {
             defaults.setValue(FontID.FontFamily.Kaiti.rawValue, forKey: FontID.fontName)
         } else if indexPath.row == 3 {
             defaults.setValue(FontID.FontFamily.Fangsong.rawValue, forKey: FontID.fontName)
-        } else if indexPath.row == 4 {
-            defaults.setValue(FontID.FontFamily.Wenyue.rawValue, forKey: FontID.fontName)
-        } else if indexPath.row == 5 {
+        }  else if indexPath.row == 4 {
             defaults.setValue(FontID.FontFamily.Zhao.rawValue, forKey: FontID.fontName)
-        } else if indexPath.row == 6 {
-           defaults.setValue(FontID.FontFamily.MingLiu.rawValue, forKey: FontID.fontName)
         }
         
         defaults.setInteger(indexPath.row, forKey: "checkIndex")

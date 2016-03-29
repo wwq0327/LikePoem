@@ -71,7 +71,6 @@ class AddPoemViewController: UITableViewController {
                 poem.content = contentTextView.text
             })
             self.delegate.addPoemViewController(self, didFinishedReload: poem)
-            self.dismissViewControllerAnimated(true, completion: nil)
             
         } else {
             let newPoem = Poem()
